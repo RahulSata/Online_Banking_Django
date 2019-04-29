@@ -1,0 +1,48 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #0093c4;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.aaa{
+	background-color: #ff8a80;
+
+}
+</style>
+</head>
+<body class ="aaa">
+<ul>
+  <li><a class="active" href="/loginmodule/transaction/">transaction</a></li>
+  <li><a href="/loginmodule/display/">Mini_statement</a></li>
+  <li><a href="/loginmodule/profile/">profile</a></li>
+  <li><a href="/loginmodule/loan/">loan</a></li>
+  <li style="float:right"><a href="/loginmodule/logout/">logout</a></li>
+</ul>
+<br><h3>
+ Welcome {{full_name}},you are logged in<br><br></h3>
+</body>
+</html>

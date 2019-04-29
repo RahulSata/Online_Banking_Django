@@ -1,0 +1,62 @@
+<html>
+{% load static %}
+<head>
+<link rel="stylesheet" href={% static "materialize.css" %} type="text/css" media="all"/>
+<script src={% static "materialize.js" %}></script>
+<style>
+table, th, td {
+    border: 1px solid black;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #0093c4;
+    position:fixed;
+    z-index: 1;
+    width: 100%;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.aa{
+  background-color: #ff8a80;
+
+}
+
+.image
+{
+  background-image:a.png;
+  background-size: 1300px;
+  width: 1000px;
+  height: 630px;
+  border: 2px solid;
+  color: pink;
+  background-repeat: no-repeat;
+}
+</style></head>
+<body background={% static "Myimage.jpg" %} class="image">
+<ul>
+  <li><a href="/loginmodule/about_us/">About us</a></li>
+  <li><a href="/loginmodule/need_help/">Help</a></li>
+  <li><a href="/loginmodule/login/">Login</a></li>
+  <li><a class="active" href="/loginmodule/home/">Home</a></li>
+</ul>
+
+<br><br>
+</body></html>

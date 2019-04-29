@@ -1,0 +1,70 @@
+
+
+<html>
+{% load static %}
+<head>
+<link rel="stylesheet" href={% static "materialize.css" %} type="text/css" media="all"/>
+<script src={% static "materialize.js" %}></script>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #0093c4;
+    position:fixed;
+    z-index: 1;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.abcd{
+	background-color: #62ebff;
+}
+
+.abc{
+	background-color: #7c4dff;
+	width: 150;
+	height:50;
+	
+}
+.a{
+	text-align:center;
+	background-color: #ff8a80;
+}
+</style></head>
+<body class ="a">
+<ul>
+  <li><a class="active" href="/loginmodule/display/">Mini_Statement</a></li>
+  <li><a href="/loginmodule/profile/">profile</a></li>
+  <li><a href="/loginmodule/loan/">loan</a></li>
+  <li style="float:right"><a href="/loginmodule/logout/">logout</a></li>
+</ul><br><br>
+<h3>
+<form action="/loginmodule/do_transaction/" method="POST">{% csrf_token %}
+<table class ="abcd"><tr>
+<td>
+From</td><td><input type="text" value="{{request.user.login.account_no}}" readonly></td></tr>
+<tr><td>To</td> <td> <input type="text" name='to'></td></tr>
+<tr><td>
+amount</td><td><input type="text" name="amount"></td>
+</tr></table><br><br><input type="submit" value="Submit" class ="abc">
+</form>
+
+{{msg}}</body>
+</html>

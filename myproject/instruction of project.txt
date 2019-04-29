@@ -1,0 +1,7 @@
+1. open c:/xamp/xamp controll  start mysql and apache..
+2. open cmd:
+		python manage.py migrate
+		python manage.py makemigrations
+		python manage.py runserver
+3. go to browser and write url:
+		localhost:8000/loginmodule/home
